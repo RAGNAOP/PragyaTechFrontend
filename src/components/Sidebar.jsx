@@ -21,8 +21,8 @@ const Sidebar = ({ currentPage, setCurrentView, userType }) => {
 					<button
 						onClick={() => setCurrentView('dashboard')}
 						className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg ${currentPage === 'dashboard'
-								? 'bg-indigo-50 text-indigo-600'
-								: 'text-gray-600 hover:bg-gray-50'
+							? 'bg-indigo-50 text-indigo-600'
+							: 'text-gray-600 hover:bg-gray-50'
 							}`}
 					>
 						<BarChart3 className="w-5 h-5" />
@@ -33,8 +33,8 @@ const Sidebar = ({ currentPage, setCurrentView, userType }) => {
 				<button
 					onClick={() => setCurrentView('verify')}
 					className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg ${currentPage === 'verify'
-							? 'bg-indigo-50 text-indigo-600'
-							: 'text-gray-600 hover:bg-gray-50'
+						? 'bg-indigo-50 text-indigo-600'
+						: 'text-gray-600 hover:bg-gray-50'
 						}`}
 				>
 					<FileCheck className="w-5 h-5" />
@@ -50,7 +50,7 @@ const Sidebar = ({ currentPage, setCurrentView, userType }) => {
 
 				<div className="pt-4">
 					<div className="text-xs font-semibold text-gray-400 mb-2">ACCOUNT</div>
-					<button className="w-full flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+					<button onClick={() => setCurrentView('settings')} className="w-full flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
 						<Users className="w-5 h-5" />
 						<span>Settings</span>
 					</button>
