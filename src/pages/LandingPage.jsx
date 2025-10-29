@@ -56,8 +56,12 @@ const LandingPage = ({ setCurrentView, setUserType }) => {
 						</div>
 					</div>
 
+					{/* Administrator Sign In Button */}
 					<button
-						onClick={() => { setUserType('admin'); setCurrentView('dashboard'); }}
+						onClick={() => {
+							setUserType('admin');
+							setCurrentView('login');
+						}}
 						className="w-full bg-indigo-600 text-white py-4 rounded-lg font-semibold mb-4 hover:bg-indigo-700 transition"
 					>
 						Administrator Sign In
@@ -65,11 +69,33 @@ const LandingPage = ({ setCurrentView, setUserType }) => {
 
 					<p className="text-center text-gray-500 mb-4">Are you a student?</p>
 
+					{/* Student Login Button */}
 					<button
-						onClick={() => { setUserType('student'); setCurrentView('verify'); }}
+						onClick={() => {
+							setUserType('student');
+							setCurrentView('login');
+						}}
 						className="w-full bg-indigo-600 text-white py-4 rounded-lg font-semibold hover:bg-indigo-700 transition"
 					>
 						Student Login
+					</button>
+
+					{/* Divider */}
+					<div className="relative my-6">
+						<div className="absolute inset-0 flex items-center">
+							<div className="w-full border-t border-gray-300"></div>
+						</div>
+						<div className="relative flex justify-center text-sm">
+							<span className="px-2 bg-white text-gray-500">or</span>
+						</div>
+					</div>
+
+					{/* Create Account Button */}
+					<button
+						onClick={() => setCurrentView('signup')}
+						className="w-full bg-white border-2 border-indigo-600 text-indigo-600 py-4 rounded-lg font-semibold hover:bg-indigo-50 transition"
+					>
+						Create New Account
 					</button>
 
 					<p className="text-xs text-gray-400 text-center mt-8">
